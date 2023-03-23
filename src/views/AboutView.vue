@@ -15,7 +15,7 @@ const { increment } = store
 onMounted(() => {
   console.log(count)
 })
-const func = value =>{
+const func = value => {
   console.log('func')
 }
 </script>
