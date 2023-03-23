@@ -34,15 +34,13 @@
     "vite": "^4.1.4"
   },
   "lint-staged": {
-    "linters": {
-      "*.{js,vue}": [
-        "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-        "git add"
-      ],
-      "*.{css,scss,less,json,md}": [
-        "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-        "git add"
-      ]
-    }
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{css,scss,less,json,md}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
