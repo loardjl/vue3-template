@@ -22,8 +22,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
+    "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-modules": "^6.0.0",
@@ -34,19 +33,14 @@
     "unplugin-vue-components": "^0.24.1",
     "vite": "^4.1.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "linters": {
       "*.{js,vue}": [
-        "prettier --write",
+        "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
         "git add"
       ],
       "*.{css,scss,less,json,md}": [
-        "prettier --write",
+        "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
         "git add"
       ]
     }
