@@ -22,4 +22,4 @@ module.exports = {
     'prettier/prettier': 'warn',
     'no-useless-escape': 'off' // 关闭禁止转义字符
   }
-};
+}

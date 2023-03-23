@@ -26,7 +26,6 @@ const func = value =>{
     display: flex;
     align-items: center;
     font-size: 14px;
-
     .count {
       font-weight: 700;
     }
