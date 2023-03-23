@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prepare": "husky install"
   },
   "dependencies": {
     "element-plus": "^2.3.1",
@@ -22,6 +23,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -34,11 +36,7 @@
     "vite": "^4.1.4"
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "eslint --fix"
-    ],
-    "src/**/*.{css,scss,less,json,md}": [
-      "eslint --fix"
-    ]
+    "*.{vue,js,jsx,cjs,mjs}": "eslint --cache --fix",
+    "*.src/": "prettier --write"
   }
 }
