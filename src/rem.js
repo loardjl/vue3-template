@@ -5,10 +5,16 @@ function setRem() {
   //得到html的Dom元素
   let htmlDom = document.getElementsByTagName('html')[0]
   //设置根元素字体大小
-  htmlDom.style.fontSize = htmlWidth / (1920 / 16) + 'px'
+  htmlDom.style.fontSize = htmlWidth / (1920 / 14) < 8 ? '8px' : htmlWidth / (1920 / 14) + 'px'
 }
 setRem()
+let timer = null
 // 改变窗口大小时重新设置 rem
 window.addEventListener('resize', function () {
-  setRem()
+  if (timer) {
+    clearTimeout(timer)
+  }
+  timer = setTimeout(() => {
+    setRem()
+  }, 200)
 })
