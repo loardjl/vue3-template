@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "preserve"
+  },
+  "baseUrl": "./",
+  "paths": {
+    "@/*": ["src/*"],
+    "@components/*": ["src/components/*"],
+    "@v/*": ["src/views/*"],
+    "@assets/*": ["src/assets/*"],
+  },
+  "jsx": "preserve",
+  "exclude": ["node_modules", "dist"]
+}
